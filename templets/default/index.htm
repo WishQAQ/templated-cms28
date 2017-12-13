@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--
+                       (0 0)
+   +-------------oOO----(_)----------------+
+   |           Powered By 织梦猫           |
+   |            www.dedemao.com            |
+   |        E-mail:admin@dedemao.com       |
+   +--------------------------oOO----------+
+                      |__|__|
+                       || ||
+                      ooO Ooo
+-->
+
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/basic.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/style/index.css" rel="stylesheet" media="screen" type="text/css" />
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/js/jquery-1.8.1.min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/js/jquery.cycle.all.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/js/index.js"></SCRIPT>
+</head>
+<body>
+{dede:include filename='head.htm'/}
+<DIV class="container index_header">
+  <DIV id=wrapper class=index_banner>
+    <DIV id=home-slider class=home-slider>
+      <DIV class=slider-item><IMG alt="" src="{dede:global.cfg_templets_skin/}/images/1389083288.jpg" 
+width=1920 height=480></DIV>
+      <DIV class=slider-item><IMG alt="" src="{dede:global.cfg_templets_skin/}/images/1389083308.jpg" 
+width=1920 height=480></DIV>
+      <DIV class=slider-item><IMG alt="" src="{dede:global.cfg_templets_skin/}/images/1389083323.jpg" 
+width=1920 height=480></DIV>
+    </DIV>
+    <DIV class=design_box>
+      <DIV id=home-slider-nav class=design>
+        <DL class=sel onmouseover=banner_hover(0)>
+          <DT>平面设计 </DT>
+          <DD class=design_dd>通过专业的视觉设计为企业、品牌创造商业价值 </DD>
+        </DL>
+        <DL class=design_center onmouseover=banner_hover(1)>
+          <DT>商业策划 </DT>
+          <DD class=design_dd>为各类资源、知识、信息交流等活动提供技术指导 </DD>
+        </DL>
+        <DL onmouseover=banner_hover(2)>
+          <DT>平面摄影 </DT>
+          <DD class=design_dd>以商业用途为基础开展的专业摄影活动 </DD>
+        </DL>
+        <DIV class=clear></DIV>
+      </DIV>
+    </DIV>
+  </DIV>
+</DIV>
+<DIV class=content>
+  <DIV class=cases>
+    <DIV class=content_title>
+      <DIV class=content_title3><A class="title_ch" href="#">经典案例</A><SPAN class=title_en>classic cases</SPAN></DIV>
+    </DIV>
+    <DIV class=cases_dl init="false"> {dede:arclist typeid='3,7,11' limit='0,1' flag='p' titlelen='60'}
+      <DL>
+        <DT><a href="[field:arcurl/]"><IMG class="img_case" alt="[field:title/]" src="[field:litpic function='thumb(@me,380,253)'/]" width=380 height=253></A>
+        <DD class=cases_name>[field:title/]</DD>
+        <DD class=cases_int> [field:info/]... </DD>
+      </DL>
+      {/dede:arclist}
+      {dede:arclist typeid='3,7,11' limit='1,1' flag='p' titlelen='60'}
+      <DL class="cases_center">
+        <DT><a href="[field:arcurl/]"><IMG class="img_case" alt="[field:title/]" src="[field:litpic function='thumb(@me,380,253)'/]" width=380 height=253></A>
+        <DD class=cases_name>[field:title/]</DD>
+        <DD class=cases_int> [field:info/]... </DD>
+      </DL>
+      {/dede:arclist}
+      {dede:arclist typeid='3,7,11' limit='2,1' flag='p' titlelen='60'}
+      <DL>
+        <DT><a href="[field:arcurl/]"><IMG class="img_case" alt="[field:title/]" src="[field:litpic function='thumb(@me,380,253)'/]" width=380 height=253></A>
+        <DD class=cases_name>[field:title/]</DD>
+        <DD class=cases_int> [field:info/]... </DD>
+      </DL>
+      {/dede:arclist}
+      <DIV class=clear></DIV>
+    </DIV>
+  </DIV>
+  <DIV class=news_bg>
+    <DIV class=news>
+      <DIV class=content_title>
+        <DIV class=content_title4><A class="title_ch" href="#">新锐观点</A><SPAN class=title_en>News View</SPAN></DIV>
+      </DIV>
+      <DIV class=news_con>
+        <DIV class="news_con_left fl" > {dede:arclist typeid='15' limit='0,3' flag='p'}
+          <table border=0 cellspacing=2 cellpadding=2 width="100%">
+            <tbody>
+              <tr>
+                <td rowspan=2 width="30%" align=center><a href='[field:arcurl/]'><img src='[field:litpic function='thumb(@me,120,120)'/]' border='0' width='120' height='120' alt='[field:title/]'></a></td>
+                <td width="70%"><a href="[field:arcurl/]">[field:title/]</a></td>
+              </tr>
+              <tr>
+                <td>[field:description/]...</td>
+              </tr>
+            </tbody>
+          </table>
+          {/dede:arclist} </DIV>
+        <DIV class="news_con_right fr"> {dede:arclist typeid='15' limit='3,3' flag='p'}
+          <table border=0 cellspacing=2 cellpadding=2 width="100%">
+            <tbody>
+              <tr>
+                <td rowspan=2 width="30%" align=center><a href='[field:arcurl/]'><img src='[field:litpic function='thumb(@me,120,120)'/]' border='0' width='120' height='120' alt='[field:title/]'></a></td>
+                <td width="70%"><a href="[field:arcurl/]">[field:title/]</a></td>
+              </tr>
+              <tr>
+                <td>[field:description/]...</td>
+              </tr>
+            </tbody>
+          </table>
+          {/dede:arclist} </DIV>
+        <DIV class=clear></DIV>
+      </DIV>
+    </DIV>
+  </DIV>
+  <DIV class=partners>
+    <DIV class=content_title>
+      <DIV class=content_title2><SPAN class=title_ch>服务客户</SPAN><SPAN 
+class=title_en>service</SPAN></DIV>
+    </DIV>
+    <DIV class=partners_table init="false">
+      <UL>
+        {dede:flink row='16' type='image'/}
+        <DIV class=clear></DIV>
+      </UL>
+      <DIV class=clear></DIV>
+    </DIV>
+  </DIV>
+</DIV>
+{dede:include filename='footer.htm'/}
+</body>
+</html>

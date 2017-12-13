@@ -1,0 +1,60 @@
+<FOOTER>
+  <DIV class="footer" id="footer">
+    <DIV class="footer_con">
+      <DIV class="footer_dl">
+        <DL>
+          <DT>我们</DT>
+          <DD>{dede:type typeid='1'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+          <DD>{dede:type typeid='2'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+          <DD>{dede:type typeid='22'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+        </DL>
+        <DL>
+          <DT>案例</DT>
+          <DD>{dede:type typeid='3'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+          <DD>{dede:type typeid='7'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+          <DD>{dede:type typeid='11'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+        </DL>
+        <DL>
+          <DT>观点</DT>
+          <DD>{dede:type typeid='16'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+          <DD>{dede:type typeid='17'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+          <DD>{dede:type typeid='18'}<A href="[field:typelink/]" rel="nofollow">[field:typename/]</A>{/dede:type}</DD>
+        </DL>
+        <DL style="WIDTH: 340px" class=footer_dl2>
+          <DT>联系</DT>
+          <DD><IMG alt="官方QQ" src="{dede:global.cfg_templets_skin/}/images/xinlang.png"><A href="http://wpa.qq.com/msgrd?v=3&uin=3365273163&site=qq&menu=yes" rel="noFollow" target=_blank>官方QQ:3326273163</A></DD>
+          <DD><IMG alt="咨询邮箱" src="{dede:global.cfg_templets_skin/}/images/mail.png"><A href="mailto:dmin@dedecms.com">admin@dedecms.com</A></DD>
+          <DD><IMG alt="电话" src="{dede:global.cfg_templets_skin/}/images/tel.png">咨询热线：0989-33685538</DD>
+          <DD><IMG alt="尼龙设计" src="{dede:global.cfg_templets_skin/}/images/weixin.png">微信：DEDE58 </DD>
+        </DL>
+        <form action="/plus/diy.php" enctype="multipart/form-data" method="post" name="form1">
+          <input type="hidden" name="action" value="post" />
+          <input type="hidden" name="diyid" value="1" />
+          <input type="hidden" name="do" value="2" />
+          <DL class="footer_dl3">
+            <DT><a href="#foot" id="foot">给我们留言</a></DT>
+            <DD>
+              <input type='text' name='name' id='name' style='width:250px'  class='intxt' value='称呼（必填）'  onFocus="if(this.value='称呼（必填）')this.value=''" onBlur="if(this.value=='')this.value=='称呼（必填）'"  />
+            </DD>
+            <DD>
+              <input type='text' name='tell' id='tell' style='width:250px'  class='intxt' value='电话（必填）'  onFocus="if(this.value='电话（必填）')this.value=''" onBlur="if(this.value=='')this.value=='电话（必填）'"  />
+            </DD>
+            <DD>
+              <textarea name='liuyan' id='liuyan' style='width:245px;height:80'></textarea>
+            </DD>
+            <input type="hidden" name="dede_fields" value="name,text;tell,text;liuyan,multitext" />
+            <input type="hidden" name="dede_fieldshash" value="1656844415b193a1d91fc0462a81cd4e" />
+            <DD>
+              <input type="submit" name="submit" src="{dede:global.cfg_templets_skin/}/images/submit_button.png" class='coolbg' />
+            </DD>
+          </DL>
+        </form>
+      </DIV>
+    </DIV>
+  </DIV>
+  <DIV></DIV>
+  <DIV class=bottom>
+    <DIV class=bottom_con>{dede:global.cfg_powerby/}&nbsp;&nbsp;{dede:global.cfg_beian/}</DIV>
+  </DIV>
+</FOOTER>
+<!-- /footer --> 

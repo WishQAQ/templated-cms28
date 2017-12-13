@@ -1,0 +1,40 @@
+<?php
+$z[0]=Array("global","",236,264);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("field","",277,296);
+$z[1][4]['name']="title";
+$z[2]=Array("global","",297,323);
+$z[2][4]['name']="cfg_webname";
+$z[3]=Array("field","",364,393);
+$z[3][4]['name']="keywords";
+$z[4]=Array("field","",433,491);
+$z[4][4]['name']="description";
+$z[4][4]['function']="html2text(@me)";
+$z[5]=Array("global","",509,541);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",623,655);
+$z[6][4]['name']="cfg_templets_skin";
+$z[7]=Array("global","",759,791);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("include","",838,873);
+$z[8][4]['filename']="head.htm";
+$z[9]=Array("global","",1045,1077);
+$z[9][4]['name']="cfg_templets_skin";
+$z[10]=Array("type","\r\n          <td><img src=\"/templets/default/images/inner_content_title.png\" alt=\"[field:typename/]\" /></td>\r\n          <td>[field:typename/]</td>\r\n          <td><img src=\"/templets/default/images/inner_content_title.png\" alt=\"[field:typename/]\" /></td>\r\n          ",1273,1572);
+$z[10][4]['typeid']="11";
+$z[11]=Array("type","<a href='[field:typelink/]'>[field:typename/]</a>",1673,1757);
+$z[11][4]['typeid']="11";
+$z[12]=Array("channel","\r\n        <li><a href='[field:typelink/]'>[field:typename/]</a></li>\r\n        ",1772,1971);
+$z[12][4]['currentstyle']="<li><a class='a2' href='~typelink~'>~typename~</a></li>";
+$z[13]=Array("list","\r\n      <div class=\"item\">\r\n        <dl>\r\n          <dt><a target=\"_blank\" href=\"[field:arcurl/]\"><img src=\"[field:litpic/]\" alt=\"[field:title/]\" width=\"280px\" /></a></dt>\r\n          <dd class=\"case_name\"><a target=\"_blank\" href=\"[field:arcurl/]\">[field:title/]</a></dd>\r\n          <dd class=\"case_tag\"><a href='[field:typeurl/]'>[field:typename/]</a></dd>\r\n          <dd class=\"case_int\"><a target=\"_blank\" href=\"[field:arcurl/]\">[field:description/]......</a></dd>\r\n        </dl>\r\n      </div>\r\n      ",2140,2681);
+$z[13][4]['pagesize']="100";
+$z[14]=Array("global","",2796,2828);
+$z[14][4]['name']="cfg_templets_skin";
+$z[15]=Array("include","",3186,3223);
+$z[15][4]['filename']="footer.htm";
+$z[16]=Array("global","",3261,3293);
+$z[16][4]['name']="cfg_templets_skin";
+$z[17]=Array("global","",3370,3402);
+$z[17][4]['name']="cfg_templets_skin";
+
+?>

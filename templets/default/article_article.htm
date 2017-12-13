@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/basic.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/style/inner.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+<body>
+{dede:include filename='head.htm'/}
+<div class="container">
+  <div class="case_detail_bg">
+    <div class="case_detail">
+      <div class="local" >您的位置：<a href='http://nilong.ys.7u7u7u.com.cn/'>主页</a> > <a href='/a/xinruiguandian/'>新锐观点</a> > <a href='/a/xinruiguandian/dingjianchuangyi/'>顶尖创意</a> > </div>
+      <div class="case_detail_color">
+        <div class="case_detail_le fl" >
+          <div>
+            <!--embed    
+type="application/x-shockwave-flash"    
+src=""    
+id="movie_player"    
+name="movie_player"    
+bgcolor="#FFFFFF"    
+quality="high"    
+allowfullscreen="true"    
+flashvars="isShowRelatedVideo=falseshowAd=0show_pre=1show_next=1isAutoPlay=falseisDebug=false    
+UserID=winType=interiorplayMovie=true&MM    
+Control=falseMMout=falseRecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3    
+007,3008,9999"    
+pluginspage="http://www.macromedia.com/go/getflashplayer"    
+width="800"
+height="500"> </embed-->
+            {dede:field.body/} </div>
+        </div>
+        <div class="case_detail_ri fr">
+          <div class="case_detail_name">{dede:field.title/}</div>
+          <div class="case_tag" style=" margin-left:0;">{dede:field.typename/}</div>
+          <div class="case_int" style="padding:0; padding-right:40px; border-top:none;">{dede:field.description/}</div>
+          <div class="case_detail_date">时间 {dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</div>
+          <div class="case_detail_rolling" style="display:none"><a class="fl a3" href="#"><</a> <a class="fl" href="#">></a></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="case_detail_info">
+      <div class="clear"></div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+{dede:include filename='footer.htm'/}
+</body>
+</html>

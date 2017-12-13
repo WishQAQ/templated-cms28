@@ -1,0 +1,28 @@
+<HEADER>
+  <DIV class=header>
+    <DIV class=top>
+      <DIV class=top_con><SPAN class=mail><IMG alt="咨询邮箱" align="absMiddle" src="{dede:global.cfg_templets_skin/}/images/mail.png"> 咨询邮箱：<SPAN>admin@dedecms.com</SPAN></SPAN> <SPAN class=tel><IMG alt="咨询热线" align="absMiddle" src="{dede:global.cfg_templets_skin/}/images/tel.png"> 咨询热线：<SPAN>0898-83365538</SPAN></SPAN> </DIV>
+    </DIV>
+    <DIV class=head_bg>
+      <DIV class=head>
+        <DIV class="logo fl">
+          <H1><A href="/"><IMG src="{dede:global.cfg_templets_skin/}/images/logo.png" width=283 height=56></A></H1>
+        </DIV>
+        <DIV class="menu fr">
+          <NAV>
+            <UL>
+              <LI><A id=menu1 href="/">网站首页</A> </LI>
+              {dede:channel type='top' currentstyle="
+              <li><a id=menu2 href='~typelink~' class='a1'>~typename~</a></li>
+              "}
+              <li><a id=menu3 href="[field:typelink/]">[field:typename/]</a></li>
+              {/dede:channel}
+            </UL>
+            <DIV class=clear></DIV>
+          </NAV>
+        </DIV>
+      </DIV>
+    </DIV>
+  </DIV>
+</HEADER>
+<!--script type="text/javascript">document.getElementById("menu2").className="a1";</script-->

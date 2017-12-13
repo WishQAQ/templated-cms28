@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>联系我们_商业策划广告装修设计公司类网站织梦模板</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templets/default/style/basic.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/inner.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+<body>
+<HEADER>
+  <DIV class=header>
+    <DIV class=top>
+      <DIV class=top_con><SPAN class=mail><IMG alt="咨询邮箱" align="absMiddle" src="/templets/default/images/mail.png"> 咨询邮箱：<SPAN>admin@dedecms.com</SPAN></SPAN> <SPAN class=tel><IMG alt="咨询热线" align="absMiddle" src="/templets/default/images/tel.png"> 咨询热线：<SPAN>0898-83365538</SPAN></SPAN> </DIV>
+    </DIV>
+    <DIV class=head_bg>
+      <DIV class=head>
+        <DIV class="logo fl">
+          <H1><A href="/"><IMG src="/templets/default/images/logo.png" width=283 height=56></A></H1>
+        </DIV>
+        <DIV class="menu fr">
+          <NAV>
+            <UL>
+              <LI><A id=menu1 href="/">网站首页</A> </LI>
+              
+              <li><a id=menu3 href="/a/guanyuwomen/">关于我们</a></li>
+              
+              <li><a id=menu3 href="/a/fuwufanwei/">服务范围</a></li>
+              
+              <li><a id=menu3 href="/a/chuangyisheji/">创意设计</a></li>
+              
+              <li><a id=menu3 href="/a/shangyancehua/">商演策划</a></li>
+              
+              <li><a id=menu3 href="/a/sheyingshexiang/">摄影摄像</a></li>
+              
+              <li><a id=menu3 href="/a/xinruiguandian/">新锐观点</a></li>
+              <li><a id=menu2 href='/a/lianxiwomen/' class='a1'>联系我们</a></li>
+            </UL>
+            <DIV class=clear></DIV>
+          </NAV>
+        </DIV>
+      </DIV>
+    </DIV>
+  </DIV>
+</HEADER>
+<!--script type="text/javascript">document.getElementById("menu2").className="a1";</script-->
+<div class="container">
+  <!--引用百度地图API-->
+  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+  <!--百度地图容器-->
+  <div style="width:1920px;height:358px;border:#ccc solid 1px;" id="dituContent"></div>
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+        addRemark();//向地图中添加文字标注
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(119.961498,31.770896);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.disableScrollWheelZoom();//禁用地图滚轮放大缩小，默认禁用(可不写)
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"织梦品牌顾问设计",content:"九州电脑数码城15-1幢514室（原百脑汇）",point:"119.96095|31.771288",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ,{title:"织梦停车场入口",content:"我的备注",point:"119.961219|31.770421",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+//文字标注数组
+    var lbPoints = [{point:"119.960042|31.771196",content:"九州电脑数码城15-1幢514室（原百脑汇）"}
+		 ,{point:"119.960743|31.770352",content:"织梦品牌顾问设计停车场入口"}
+		 ];
+    //向地图中添加文字标注函数
+    function addRemark(){
+        for(var i=0;i<lbPoints.length;i++){
+            var json = lbPoints[i];
+            var p1 = json.point.split("|")[0];
+            var p2 = json.point.split("|")[1];
+            var label = new BMap.Label("<div style='padding:2px;'>"+json.content+"</div>",{point:new BMap.Point(p1,p2),offset:new BMap.Size(3,-6)});
+            map.addOverlay(label);
+            label.setStyle({borderColor:"#999"});
+        }
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</div>
+<div class="content">
+  <div class="contact">
+    <div class="contact_type">
+      <div class="general_title_new">
+        <div class="dian_bg"></div>
+        <h1>联系织梦</h1>
+        <div class="dian_bg"></div>
+      </div>
+      <div class="contact_type_ul">
+        <ul>
+          <li class="contact_type_ad">
+            <div class="contact_type_ad_title">公司地址</div>
+            <div class="contact_type_ad_int">常州市天宁区<br />
+              九洲新世界15-1幢514室（九洲数码城5楼）<br />
+              原百脑汇电脑城</div>
+            <div class="contact_type_ad_button">Address</div>
+          </li>
+          <li class="contact_type_tel">
+            <div class="contact_type_ad_title">联系方式</div>
+            <div class="contact_type_ad_int">联系电话：0519-83385538<br />
+              传真：0519-36595538<br />
+              Email：admin@dedecms.com</div>
+            <div class="contact_type_ad_button" style="background:#91bb4f;">Contact</div>
+          </li>
+          <li class="contact_type_mail">
+            <div class="contact_type_ad_title">织梦微信</div>
+            <div class="contact_type_ad_int"><img src="/templets/default/images/contact_weixin.gif" alt="扫描织梦官方微信"  /></div>
+          </li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+    </div>
+    <div class="contact_arrive">
+      <div class="contact_arrive_left">
+        <h2>如何到达织梦</h2>
+        <dl class="bus">
+          <dt>公交车</dt>
+          <dd>站台： 兰陵站、劳动新村站、常州电脑城站</dd>
+          <dd>线路：1路; 14路; 28路; 31路; 38路; 219路; 220路; b11路、225路、302路、55路</dd>
+        </dl>
+        <dl class="car">
+          <dt>出租车/自驾</dt>
+          <dd>地点：九洲新世界（原百脑汇电脑城）</dd>
+          <dd>地址：常州市天宁区九洲新世界15-1幢514室，九洲电脑数码城5楼（原百脑汇电脑城）</dd>
+        </dl>
+      </div>
+      <div class="contact_arrive_right">
+        <h2>给我们留言</h2>
+        <div class="contact_table">
+          <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+            <input type="hidden" name="action" value="post" />
+            <input type="hidden" name="diyid" value="1" />
+            <input type="hidden" name="do" value="2" />
+            <table>
+              <tr>
+                <td><input name="name" class="input" type="text" value="你的称呼（必填）" onFocus="if(this.value='你的称呼（必填）')this.value=''" onBlur="if(this.value=='')this.value=='你的称呼（必填）'" /></td>
+                <td><input name="tell" class="input" type="text" value="你的电话（必填）" onFocus="if(this.value='你的电话（必填）')this.value=''" onBlur="if(this.value=='')this.value=='你的电话（必填）'" /></td>
+              </tr>
+              <tr>
+                <td><input name="qqhao" class="input" type="text" value="QQ号码" onFocus="if(this.value='QQ号码')this.value=''" onBlur="if(this.value=='')this.value=='QQ号码'" /></td>
+                <td><input name="gongsi" class="input" type="text" value="所在公司" onFocus="if(this.value='所在公司')this.value=''" onBlur="if(this.value=='')this.value=='所在公司'" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><textarea name="liuyan" cols="" rows="" onFocus="if(this.value='请输入留言内容')this.value=''" onBlur="if(this.value=='')this.value=='请输入留言内容'">请输入留言内容</textarea></td>
+              </tr>
+              <tr>
+                <input type="hidden" name="dede_fields" value="name,text;tell,text;liuyan,multitext;qqhao,text;gongsi,text" />
+                <input type="hidden" name="dede_fieldshash" value="86071664f05742fa80fe29074c1cefb6" />
+                <td colspan="2"><input type="submit" class="btn_submit" value="" /></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<FOOTER>
+  <DIV class="footer" id="footer">
+    <DIV class="footer_con">
+      <DIV class="footer_dl">
+        <DL>
+          <DT>我们</DT>
+          <DD><A href="/a/guanyuwomen/" rel="nofollow">关于我们</A></DD>
+          <DD><A href="/a/fuwufanwei/" rel="nofollow">服务范围</A></DD>
+          <DD><A href="/a/lianxiwomen/" rel="nofollow">联系我们</A></DD>
+        </DL>
+        <DL>
+          <DT>案例</DT>
+          <DD><A href="/a/chuangyisheji/" rel="nofollow">创意设计</A></DD>
+          <DD><A href="/a/shangyancehua/" rel="nofollow">商演策划</A></DD>
+          <DD><A href="/a/sheyingshexiang/" rel="nofollow">摄影摄像</A></DD>
+        </DL>
+        <DL>
+          <DT>观点</DT>
+          <DD><A href="/a/xinruiguandian/secaipeise/" rel="nofollow">色彩配色</A></DD>
+          <DD><A href="/a/xinruiguandian/kongjianbuju/" rel="nofollow">空间布局</A></DD>
+          <DD><A href="/a/xinruiguandian/chanpinzaoxing/" rel="nofollow">产品造型</A></DD>
+        </DL>
+        <DL style="WIDTH: 340px" class=footer_dl2>
+          <DT>联系</DT>
+          <DD><IMG alt="官方QQ" src="/templets/default/images/xinlang.png"><A href="http://wpa.qq.com/msgrd?v=3&uin=3365273163&site=qq&menu=yes" rel="noFollow" target=_blank>官方QQ:3326273163</A></DD>
+          <DD><IMG alt="咨询邮箱" src="/templets/default/images/mail.png"><A href="mailto:dmin@dedecms.com">admin@dedecms.com</A></DD>
+          <DD><IMG alt="电话" src="/templets/default/images/tel.png">咨询热线：0989-33685538</DD>
+          <DD><IMG alt="尼龙设计" src="/templets/default/images/weixin.png">微信：DEDE58 </DD>
+        </DL>
+        <form action="/plus/diy.php" enctype="multipart/form-data" method="post" name="form1">
+          <input type="hidden" name="action" value="post" />
+          <input type="hidden" name="diyid" value="1" />
+          <input type="hidden" name="do" value="2" />
+          <DL class="footer_dl3">
+            <DT><a href="#foot" id="foot">给我们留言</a></DT>
+            <DD>
+              <input type='text' name='name' id='name' style='width:250px'  class='intxt' value='称呼（必填）'  onFocus="if(this.value='称呼（必填）')this.value=''" onBlur="if(this.value=='')this.value=='称呼（必填）'"  />
+            </DD>
+            <DD>
+              <input type='text' name='tell' id='tell' style='width:250px'  class='intxt' value='电话（必填）'  onFocus="if(this.value='电话（必填）')this.value=''" onBlur="if(this.value=='')this.value=='电话（必填）'"  />
+            </DD>
+            <DD>
+              <textarea name='liuyan' id='liuyan' style='width:245px;height:80'></textarea>
+            </DD>
+            <input type="hidden" name="dede_fields" value="name,text;tell,text;liuyan,multitext" />
+            <input type="hidden" name="dede_fieldshash" value="1656844415b193a1d91fc0462a81cd4e" />
+            <DD>
+              <input type="submit" name="submit" src="/templets/default/images/submit_button.png" class='coolbg' />
+            </DD>
+          </DL>
+        </form>
+      </DIV>
+    </DIV>
+  </DIV>
+  <DIV></DIV>
+  <DIV class=bottom>
+    <DIV class=bottom_con>Copyright &copy; DEDECMS.COM 地址：广东省广州市金城国际大厦A幢5884室，明珠电脑数码城5楼  电话：0898-66885538 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a>&nbsp;&nbsp;备案/许可证编号为：粤ICP备32659856</DIV>
+  </DIV>
+</FOOTER>
+<!-- /footer --> 
+
+</body>
+</html>
